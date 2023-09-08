@@ -1,1 +1,335 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"/><meta http-equiv="Access-Control-Allow-Origin" content="*"><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="description" content="一个默默无闻的主页"/><meta name="keywords" content="黎歌,个人主页"/><meta name="author" content="黎歌"/><meta name="theme-color" content="#424242"/><title>黎歌の主页</title><link rel="icon" href="/images/icon/favicon.ico"><link rel="apple-touch-icon" href="/images/icon/apple-touch-icon.png"><script type="module" crossorigin src="/js/index-3fcd27a8.js"></script><link rel="stylesheet" href="/css/index-49061b3d.css"><link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head><body><div id="app"></div></body></html>
+<html lang="zh-CN">
+    <script id="allow-copy_script">
+        (function agent() {
+            let unlock = false
+            document.addEventListener('allow_copy', (event)=>{
+                unlock = event.detail.unlock
+            }
+            )
+
+            const copyEvents = ['copy', 'cut', 'contextmenu', 'selectstart', 'mousedown', 'mouseup', 'mousemove', 'keydown', 'keypress', 'keyup', ]
+            const rejectOtherHandlers = (e)=>{
+                if (unlock) {
+                    e.stopPropagation()
+                    if (e.stopImmediatePropagation)
+                        e.stopImmediatePropagation()
+                }
+            }
+            copyEvents.forEach((evt)=>{
+                document.documentElement.addEventListener(evt, rejectOtherHandlers, {
+                    capture: true,
+                })
+            }
+            )
+        }
+        )()
+    </script>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Access-Control-Allow-Origin" content="*">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="一个默默无闻的主页">
+        <meta name="keywords" content="黎歌,个人主页">
+        <meta name="author" content="黎歌">
+        <meta name="theme-color" content="#424242">
+        <title>黎歌の主页</title>
+        <link rel="icon" href="/images/icon/favicon.ico">
+        <link rel="apple-touch-icon" href="/images/icon/apple-touch-icon.png">
+        <script type="module" crossorigin="" src="/js/index-3fcd27a8.js"></script>
+        <link rel="stylesheet" href="/css/index-49061b3d.css">
+        <link rel="manifest" href="/manifest.webmanifest">
+        <script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script>
+        <style type="text/css" abt="234"></style>
+        <link rel="modulepreload" as="script" crossorigin="" href="/js/ua-8e12e041.js">
+        <link rel="modulepreload" as="script" crossorigin="" href="/js/el-popper-0ae00969.js">
+        <link rel="stylesheet" href="/css/el-popper-bcbcef3d.css">
+        <link rel="modulepreload" as="script" crossorigin="" href="/js/el-button-977e5429.js">
+        <link rel="stylesheet" href="/css/el-button-1f1851f2.css">
+        <link rel="modulepreload" as="script" crossorigin="" href="/js/tvbox-d6358adf.js">
+        <link rel="modulepreload" as="script" crossorigin="" href="/js/el-message-366eabd9.js">
+        <link rel="stylesheet" href="/css/el-message-f448e6ff.css">
+        <link rel="modulepreload" as="script" crossorigin="" href="/js/rand-099990c4.js">
+        <link rel="stylesheet" href="/css/ua-e087ea78.css">
+    </head>
+    <body>
+        <div id="app" data-v-app="">
+            <div>
+                <div class="container" element-loading-text="下载中，莫着急..." data-v-8af8c6b8="">
+                    <h1 class="title" data-v-8af8c6b8="">TVBOX接口解密</h1>
+                    <div class="row" data-v-8af8c6b8="">
+                        <div class="el-autocomplete el-tooltip__trigger el-tooltip__trigger" role="combobox" aria-owns="el-autocomplete-9559">
+                            <div class="el-input el-input--large el-input-group el-input-group--append el-input--suffix">
+                                <!-- input -->
+                                <!-- prepend slot -->
+                                <!--v-if-->
+                                <div class="el-input__wrapper">
+                                    <!-- prefix slot -->
+                                    <!--v-if-->
+                                    <input class="el-input__inner" type="text" autocomplete="off" tabindex="0" placeholder="可下拉选择" role="textbox" aria-autocomplete="list" aria-controls="id" aria-activedescendant="el-autocomplete-9559-item--1" id="el-id-7161-2">
+                                    <!-- suffix slot -->
+                                    <!--v-if-->
+                                </div>
+                                <!-- append slot -->
+                                <div class="el-input-group__append">
+                                    <button aria-disabled="false" type="button" class="el-button is-plain btn_oper" id="copyJoggle" data-clipboard-text="" data-v-8af8c6b8="">
+                                        <!--v-if-->
+                                        <span class="">复制接口 </span>
+                                    </button>
+                                    <button aria-disabled="false" type="button" class="el-button is-plain btn_oper" data-v-8af8c6b8="">
+                                        <!--v-if-->
+                                        <span class="">一键解密 </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" data-v-8af8c6b8="">
+                        <div class="el-textarea" data-v-8af8c6b8="">
+                            <!-- input -->
+                            <!-- textarea -->
+                            <textarea class="el-textarea__inner" tabindex="0" readonly="" autocomplete="off" id="el-id-7161-3" style="min-height: 490px; height: 490px;"></textarea>
+                            <!--v-if-->
+                        </div>
+                    </div>
+                    <div class="row btn-row" data-v-8af8c6b8="" style="text-align: center;">
+                        <button aria-disabled="false" type="button" class="el-button el-button--primary el-button--large" id="copyResult" data-clipboard-text="" data-v-8af8c6b8="">
+                            <!--v-if-->
+                            <span class="">复制内容 </span>
+                        </button>
+                        <button aria-disabled="false" type="button" class="el-button el-button--success el-button--large" data-v-8af8c6b8="">
+                            <!--v-if-->
+                            <span class="">下载Jar</span>
+                        </button>
+                        <button aria-disabled="false" type="button" class="el-button el-button--danger el-button--large el-tooltip__trigger" data-v-8af8c6b8="">
+                            <!--v-if-->
+                            <span class="">下载本地包</span>
+                        </button>
+                        <button aria-disabled="false" type="button" class="el-button el-button--warning el-button--large" data-v-8af8c6b8="">
+                            <!--v-if-->
+                            <span class="">
+                                主页 <a href="/" class="back" data-v-8af8c6b8=""></a>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="el-popper-container-7161">
+            <div class="el-popper is-pure is-light el-autocomplete__popper" tabindex="-1" aria-hidden="true" style="z-index: 2009; position: absolute; inset: 145px auto auto 196px; display: none;" role="tooltip" id="el-id-7161-0" data-popper-reference-hidden="false" data-popper-escaped="false" data-popper-placement="bottom-start">
+                <div class="el-autocomplete-suggestion" role="region" style="outline: none; min-width: 1000px;">
+                    <div class="el-scrollbar" id="el-autocomplete-9559" role="listbox">
+                        <div class="el-autocomplete-suggestion__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default">
+                            <ul class="el-scrollbar__view el-autocomplete-suggestion__list" style="">
+                                <li id="el-autocomplete-9559-item-0" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🏡应用多多家庭版:</span>
+                                    <span class="addr" data-v-8af8c6b8="">http://yydsys.top/duo</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-1" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🏡应用多多备用:</span>
+                                    <span class="addr" data-v-8af8c6b8="">http://cdn.yydsys.top/duo</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-2" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🚀饭太硬线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">http://饭太硬.top/tv</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-3" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🚀肥猫线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">http://肥猫.love</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-4" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🚀蜂蜜线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://ghproxy.com/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-5" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🚀道长线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://pastebin.com/raw/5NHaxyGR</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-6" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🚀香雅情线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://ghproxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-7" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🚀小米线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">http://xhww.fun:63/小米/DEMO.json</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-8" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🚀菜妮丝线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://tvbox.cainisi.cf</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-9" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🚀俊佬线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">http://home.jundie.top:81/top98.json</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-10" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🚀小雅线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">http://101.34.67.237/config/1</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-11" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🚀霜辉月明:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://ghproxy.com/https://raw.githubusercontent.com/lm317379829/PyramidStore/pyramid/py.json</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-12" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🚀dxawi0线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://xhdwc.tk/0</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-13" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🚀老刘备线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://raw.liucn.cc/box/m.json</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-14" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🚀运输车(有跑马灯):</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://weixine.net/ysc.json</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-15" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🐹潇洒线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://la.kstore.space/download/2863/01.txt</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-16" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🐹南风线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://agit.ai/Yoursmile7/TVBox/raw/branch/master/XC.json</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-17" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🐹蚂蚁论坛线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://la.kstore.space/download/2883/0110.txt</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-18" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🐹月光宝盒:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://jihulab.com/ygbh1/box/-/raw/main/%E6%9C%88%E5%85%89%E5%AE%9D%E7%9B%92</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-19" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🐹欧歌线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">http://tv.nxog.top/m/111.php?ou=%E6%AC%A7%E6%AD%8C &amp;mz=index2 &amp;xl=&amp;jar=index2</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-20" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🐹吾爱线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">http://52bsj.vip:98/wuai</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-21" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🐹云星日记:</span>
+                                    <span class="addr" data-v-8af8c6b8="">http://itvbox.cc/tvbox/云星日记/1.m3u8</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-22" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🐹喵影视线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">http://miaotvs.cn/meow</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-23" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🐹源享家线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://源享家.ml/23424</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-24" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🐹星辰线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">http://8.210.232.168/xc.json</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-25" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🐹分享者线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://agit.ai/66666/mao/raw/branch/master/00/000.m3u8</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-26" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🐹冰河线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://ju.binghe.ga/4.txt</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-27" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">💎不良帅线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://notabug.org/qizhen15800/My9394/raw/master/ProfessionalEdition.m3u8</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-28" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">💎乱世线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">http://www.dmtv.ml/mao/single.json</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-29" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">💎一影视线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://ghproxy.com/https://raw.githubusercontent.com/tv-player/tvbox-line/main/tv/fj.json</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-30" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">💎佰欣园线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://ghproxy.com/https://raw.githubusercontent.com/chengxueli818913/maoTV/main/44.txt</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-31" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">💎甜蜜线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://ghproxy.com/https://raw.githubusercontent.com/kebedd69/TVbox-interface/main/%E7%94%9C%E8%9C%9C.json</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-32" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">💎一木线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://ghproxy.com/https://raw.githubusercontent.com/xianyuyimu/TVBOX-/main/TVBox/%E4%B8%80%E6%9C%A8%E8%87%AA%E7%94%A8.json</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-33" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">💎kvymin线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://agit.ai/kvymin/TV/raw/branch/master/Box.json</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-34" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">💎agit/abc线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://agit.ai/n/b/raw/branch/a/b/c.json</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-35" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">💎zzz1线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://agit.ai/mmmgit/tvbox/raw/branch/main/zzz1.json</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-36" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">💎小马线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://szyyds.cn/tv/x.json</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-37" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🏄️夜猫子(有跑马灯):</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://jihulab.com/ymz1231/xymz/-/raw/main/ymxx</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-38" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🏄️荷城茶秀:</span>
+                                    <span class="addr" data-v-8af8c6b8="">http://rihou.cc:88/荷城茶秀</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-39" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🏄️高天流云:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://ghproxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-40" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🏄️胖鸭线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://agit.ai/cyl518/yl/raw/branch/master/ml.json</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-41" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🏄️元兴线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://freed.yuanhsing.cf/TVBox/meowcf.json</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-42" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🏄️小胡线路:</span>
+                                    <span class="addr" data-v-8af8c6b8="">http://smr.xzam.cn:66/tv</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-43" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🏰应用多多:</span>
+                                    <span class="addr" data-v-8af8c6b8="">https://jihulab.com/duomv/apps/-/raw/main/fast.json</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-44" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🏰欧歌:</span>
+                                    <span class="addr" data-v-8af8c6b8="">http://tv.nxog.top/api.php?mz=xb &amp;id=1 &amp;b=欧歌</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-45" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🏰云星日记:</span>
+                                    <span class="addr" data-v-8af8c6b8="">http://jk.itvbox.cc:66/可视TV/云星日记/仓库/api.json</span>
+                                </li>
+                                <li id="el-autocomplete-9559-item-46" class="" role="option" aria-selected="false">
+                                    <span class="name" data-v-8af8c6b8="">🏰吾爱多仓:</span>
+                                    <span class="addr" data-v-8af8c6b8="">http://52bsj.vip:98/wuaihouse</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="el-scrollbar__bar is-horizontal" style="display: none;">
+                            <div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div>
+                        </div>
+                        <div class="el-scrollbar__bar is-vertical" style="display: none;">
+                            <div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div>
+                        </div>
+                    </div>
+                </div>
+                <span class="el-popper__arrow" data-popper-arrow="" style="position: absolute; left: 494px;"></span>
+            </div>
+            <div class="el-popper is-light el-popover" tabindex="-1" aria-hidden="true" style="z-index: 2002; width: 250px; position: absolute; inset: 715px auto auto 591.5px; display: none;" role="tooltip" id="el-id-7161-1" data-popper-reference-hidden="false" data-popper-escaped="false" data-popper-placement="bottom">
+                <!--v-if-->
+                <div data-v-8af8c6b8="" style="display: flex; gap: 16px; flex-direction: column;">
+                    <h3 data-v-8af8c6b8="" style="font-weight: 600;">QQ频道</h3>
+                    <p data-v-8af8c6b8="">
+                        <img src="/images/QRCode.jpg" data-v-8af8c6b8="" style="width: 226px;">
+                    </p>
+                </div>
+                <span class="el-popper__arrow" data-popper-arrow="" style="position: absolute; left: 0px;"></span>
+            </div>
+        </div>
+    </body>
+</html>
