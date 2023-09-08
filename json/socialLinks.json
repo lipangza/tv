@@ -1,0 +1,11 @@
+[{
+    "name": "QQ",
+    "icon": "/images/icon/qq.png",
+    "tip": "有什么事吗",
+    "url": "https://res.abeim.cn/api/qq/?qq=869425299"
+}, {
+    "name": "Email",
+    "icon": "/images/icon/email.png",
+    "tip": "来封 Email ~",
+    "url": "869425299@qq.com"
+}]
