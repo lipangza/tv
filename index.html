@@ -1,29 +1,5 @@
 <html lang="zh-CN">
-    <script id="allow-copy_script">
-        (function agent() {
-            let unlock = false
-            document.addEventListener('allow_copy', (event)=>{
-                unlock = event.detail.unlock
-            }
-            )
 
-            const copyEvents = ['copy', 'cut', 'contextmenu', 'selectstart', 'mousedown', 'mouseup', 'mousemove', 'keydown', 'keypress', 'keyup', ]
-            const rejectOtherHandlers = (e)=>{
-                if (unlock) {
-                    e.stopPropagation()
-                    if (e.stopImmediatePropagation)
-                        e.stopImmediatePropagation()
-                }
-            }
-            copyEvents.forEach((evt)=>{
-                document.documentElement.addEventListener(evt, rejectOtherHandlers, {
-                    capture: true,
-                })
-            }
-            )
-        }
-        )()
-    </script>
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="Access-Control-Allow-Origin" content="*">
@@ -35,21 +11,29 @@
         <title>黎歌の主页</title>
         <link rel="icon" href="images/icon/favicon.ico">
         <link rel="apple-touch-icon" href="images/icon/apple-touch-icon.png">
-        <script type="module" crossorigin="" src="js/index-3fcd27a8.js"></script>
+
         <link rel="stylesheet" href="css/index-49061b3d.css">
-        <link rel="manifest" href="manifest.webmanifest">
         <script id="vite-plugin-pwa:register-sw" src="registerSW.js"></script>
-        <style type="text/css" abt="234"></style>
-        <link rel="modulepreload" as="script" crossorigin="" href="js/ua-8e12e041.js">
-        <link rel="modulepreload" as="script" crossorigin="" href="js/el-popper-0ae00969.js">
+
         <link rel="stylesheet" href="css/el-popper-bcbcef3d.css">
-        <link rel="modulepreload" as="script" crossorigin="" href="js/el-button-977e5429.js">
+
         <link rel="stylesheet" href="css/el-button-1f1851f2.css">
-        <link rel="modulepreload" as="script" crossorigin="" href="js/tvbox-d6358adf.js">
-        <link rel="modulepreload" as="script" crossorigin="" href="js/el-message-366eabd9.js">
+
         <link rel="stylesheet" href="css/el-message-f448e6ff.css">
-        <link rel="modulepreload" as="script" crossorigin="" href="js/rand-099990c4.js">
+
         <link rel="stylesheet" href="css/ua-e087ea78.css">
+		
+		
+		<script src="js/index-3fcd27a8.js"></script>
+		
+		<script src="js/el-button-977e5429.js"></script>
+		<script src="js/tvbox-d6358adf.js"></script>
+        <script src="js/el-message-366eabd9.js"></script>
+		<script src="js/rand-099990c4.js"></script>	
+		<script src="js/ua-8e12e041.js"></script>
+        <script src="js/el-popper-0ae00969.js"></script>		
+		
+		
     </head>
     <body>
         <div id="app" data-v-app="">
